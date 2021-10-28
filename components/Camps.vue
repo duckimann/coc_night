@@ -1,5 +1,5 @@
 <template>
-    <div class="camps">
+    <div class="camps borderP7em customScrollBar">
         <camp v-for="(name, index) of camps" :name="name" :cano="index" />
     </div>
 </template>
@@ -11,19 +11,8 @@
     padding: 0.3rem 0.5rem 0.7rem 0.5rem;
     width: 97%;
     height: 50%;
-    background: #d3d3cbff;
-    border-radius: 0.7em;
-    box-shadow: 0 -0.2rem #a4a49eff, 0 0.2rem #f6f6f3ff;
-}
-.camps::-webkit-scrollbar {
-    width: 5%;
-    height: 0.6%;
-}
-.camps::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-.camps::-webkit-scrollbar-thumb {
-    background: #191919;
+    background: var(--bgColor2);
+    box-shadow: 0 -0.2rem var(--shadowColor1), 0 0.2rem var(--shadowColor2);
 }
 </style>
 <script>

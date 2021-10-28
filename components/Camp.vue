@@ -1,5 +1,5 @@
 <template>
-    <div class="camp">
+    <div class="camp borderP7em">
         <div :class="['campNo', name ? '' : 'campNo_noTroop']">
             <h3>Camp {{ cano + 1 }}</h3>
         </div>
@@ -21,9 +21,8 @@
     height: 99%;
     aspect-ratio: 1 / 1.5;
     background: #e8e8e0ff;
-    border-radius: 0.7em;
     margin: 0.2em 0.3em 0 0.3em;
-    box-shadow: 0 0.2rem #a4a49eff, 0 -0.2rem #f6f6f3ff;
+    box-shadow: 0 0.2rem var(--shadowColor1), 0 -0.2rem var(--shadowColor2);
 }
 .camp:first-child {
     margin-left: auto;
@@ -32,14 +31,13 @@
     margin-right: auto;
 }
 .campNo {
-    border-top-left-radius: 0.7em;
-    border-top-right-radius: 0.7em;
+    border-radius: var(--bp7em) var(--bp7em) 0 0;
     background: #83a851ff;
     color: #fff;
     padding: 0.5em;
 }
 .campNo_noTroop {
-    background: #5e5451ff !important;
+    background: var(--bgColor1) !important;
 }
 .smCamp {
     position: relative;
@@ -54,7 +52,7 @@
 .inCamp {
     position: relative;
     border-radius: 0.3em;
-    background: #5e5451ff;
+    background: var(--bgColor1);
     width: 80%;
     color: #fff;
 }

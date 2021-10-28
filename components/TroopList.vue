@@ -1,5 +1,5 @@
 <template>
-    <div class="troopList">
+    <div class="troopList borderP7em customScrollBar">
         <Troop
             v-for="tro of troop_list"
             :name="tro.name"
@@ -15,20 +15,9 @@
     overflow-x: auto;
     padding: 0.3rem 0.5rem 0.7rem 0.5rem;
     width: 97%;
-    background: #d3d3cbff;
-    border-radius: 0.7em;
-    box-shadow: 0 -0.2rem #a4a49eff, 0 0.2rem #f6f6f3ff;
+    background: var(--bgColor2);
+    box-shadow: 0 -0.2rem var(--shadowColor1), 0 0.2rem var(--shadowColor2);
     height: 20%;
-}
-.troopList::-webkit-scrollbar {
-    width: 5%;
-    height: 0.6%;
-}
-.troopList::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-.troopList::-webkit-scrollbar-thumb {
-    background: #191919;
 }
 .troop {
     margin: 0 0.2rem;
